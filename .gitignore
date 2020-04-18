@@ -1,4 +1,5 @@
 .*.swp
 *~
+.kk.log
 .kk.lst
 path.txt
