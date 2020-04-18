@@ -6,6 +6,7 @@ from pathlib import Path
 import string
 import codecs
 
+HOME="lolo"
 MAIN_DIR = Path(sys.argv[1]).resolve()
 LIST_FILE = MAIN_DIR / ".kk.lst"
 
