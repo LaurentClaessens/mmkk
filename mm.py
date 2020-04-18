@@ -19,8 +19,7 @@ def do_work():
         list_file.write(ligne)
 
     # Création du raccourcis dans konqueror
-    generic_relative = 'script/bureau/generic.desktop'
-    generic_file = Path.home() / generic_relative
+    generic_file = MMKK_DIR / "generic.desktop"
     current_content = open(generic_file, "r").read()
     new_content = current_content.replace("KKK", MARK).replace("RRR", MARKED_DIR)
 
