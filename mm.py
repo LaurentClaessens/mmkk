@@ -3,6 +3,7 @@
 import sys
 import os
 from pathlib import Path
+import contextlib
 
 MARK = sys.argv[1]
 MARKED_DIR = os.getcwd()
@@ -26,7 +27,8 @@ def do_work():
     new_filename = Path.home() \
                 / f".local/share/kservices5/searchproviders/{MARK}.desktop"
 
-    with open(new_filename,'w') as new_file:
-        new_file.write(new_content)
+    with contextlib.suppress(FileNotFoundError):
+        with open(new_filename,'w') as new_file:
+            new_file.write(new_content)
 
 do_work()
